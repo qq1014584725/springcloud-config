@@ -1,2 +1,16 @@
 config:
-  info: "master brach,springcloud-config/config-dev.yml version=5"
+  machine: 
+    time-step:     #采集间隔
+      get: 20      #数据采集间隔/ms
+      display: 1   #显示间隔/ms
+    data: 
+      user:            #下载权限用户
+        username: CQUT
+        password: CQUT
+      compress: mean   #压缩方式 mean，max，min
+      auto-compress: True  #是否自动保存压缩数据集
+        time: 2        #每次保存时间间隔/h
+      step: 5          #采集步长
+      file: CSV        #下载文件格式
+      persistence: True #是否持久化保存
+      
